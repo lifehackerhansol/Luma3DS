@@ -1,6 +1,6 @@
 /*
 *   This file is part of Luma3DS
-*   Copyright (C) 2016-2020 Aurora Wright, TuxSH
+*   Copyright (C) 2016-2022 Aurora Wright, TuxSH
 *
 *   This program is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -72,6 +72,7 @@ static const char *singleOptionIniNamesMisc[] = {
     "enable_dsi_external_filter",
     "disable_arm11_exception_handlers",
     "enable_safe_firm_rosalina",
+    "ignore_broken_cameras"
 };
 
 static const char *keyNames[] = {

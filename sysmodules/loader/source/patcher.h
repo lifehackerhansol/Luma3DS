@@ -40,6 +40,7 @@ enum singleOptions
     ENABLEDSIEXTFILTER,
     DISABLEARM11EXCHANDLERS,
     ENABLESAFEFIRMROSALINA,
+    IGNOREBROKENCAMERAS,
 };
 
 extern u32 config, multiConfig, bootConfig;
