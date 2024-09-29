@@ -254,7 +254,7 @@ void main(int argc, char **argv, u32 magicWord)
     }
 
     u32 pinMode = MULTICONFIG(PIN);
-    bool shouldLoadConfigMenu = needConfig == CREATE_CONFIGURATION || ((pressed & (BUTTON_SELECT | BUTTON_L1)) == BUTTON_SELECT);
+    bool shouldLoadConfigMenu = needConfig == CREATE_CONFIGURATION || (pressed & BUTTON_L1);
     bool pinExists = pinMode != 0 && verifyPin(pinMode);
 
     /* If the PIN has been verified, wait to make it easier to press the SAFE_MODE combo or the configuration menu button
@@ -268,7 +268,7 @@ void main(int argc, char **argv, u32 magicWord)
         pressed = HID_PAD;
     }
 
-    shouldLoadConfigMenu = needConfig == CREATE_CONFIGURATION || ((pressed & (BUTTON_SELECT | BUTTON_L1)) == BUTTON_SELECT);
+    shouldLoadConfigMenu = needConfig == CREATE_CONFIGURATION || (pressed & BUTTON_L1);
     if(shouldLoadConfigMenu)
     {
         configMenu(pinExists, pinMode);
